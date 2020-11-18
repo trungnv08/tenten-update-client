@@ -1,0 +1,74 @@
+[
+  {
+    "id": "320a2b92-8b78-485c-808a-5096dbf93a25",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "mail.domain.tld.",
+    "type": "A",
+    "records": [
+      "113.179.114.111"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "a27272ba-e202-45be-8614-548066acd6d9",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "www.domain.tld.",
+    "type": "CNAME",
+    "records": [
+      "domain.tld."
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2e29925b-6a02-4cdf-aac9-2429520ef3a1",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "*.domain.tld.",
+    "type": "A",
+    "records": [
+      "113.179.11.111"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b24504de-cd23-4991-8af9-079b47ca4624",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "domain.tld.",
+    "type": "A",
+    "records": [
+      "113.179.14.111"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "d45f3c69-6e69-44fa-95c7-300b6539d3e5",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "domain.tld.",
+    "type": "MX",
+    "records": [
+      "10 mail.domain.tld."
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "5d2cc405-5771-41bb-b4f6-56715a9a2e83",
+    "ttl": null,
+    "action": "NONE",
+    "zone_name": "domain.tld.",
+    "name": "domain.tld.",
+    "type": "TXT",
+    "records": [
+      "v=spf1 mx a ip4:113.179.184.111 ~all"
+    ],
+    "status": "ACTIVE"
+  }
+]
