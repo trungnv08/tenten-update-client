@@ -4,6 +4,7 @@ package com.trung.entity;
 import com.google.gson.Gson;
 import com.trung.exception.CannotDetectIpException;
 import com.trung.util.Helpers;
+import com.trung.util.LoggerHandler;
 import org.jsoup.Connection;
 import org.jsoup.Connection.Method;
 import org.jsoup.Connection.Response;
@@ -19,7 +20,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.trung.constanct.Constant.*;
+import static com.trung.constant.Constant.*;
 
 /**
  * @author trung
@@ -33,7 +34,9 @@ public class Client {
     private final Gson gson = new Gson();
     private Map<String, String> cookies;
     private final Domain domain;
-
+    static {
+        logger.addHandler(LoggerHandler.getInstance());
+    }
     public Client(Domain domain) {
         this.domain = domain;
     }
@@ -89,7 +92,7 @@ public class Client {
                 this.csrfToken = elements.first().val();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "error: {0}", e.getMessage());
         }
 
 

@@ -19,8 +19,11 @@ import java.util.logging.Logger;
 
 public class Helpers {
     public static final Gson gson = new Gson();
-    private static final Random random = new Random();
     private static final Logger logger = Logger.getLogger(Helpers.class.getCanonicalName());
+
+    static {
+        logger.addHandler(LoggerHandler.getInstance());
+    }
 
     private Helpers() {
     }
@@ -40,16 +43,11 @@ public class Helpers {
         } catch (FileNotFoundException e) {
             logger.log(Level.SEVERE, "Sorry, unable to find config.properties");
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Exception fire!\n ");
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Exception fire!\n {0} ", e.getMessage());
         }
         return Collections.emptyList();
     }
 
-    @SuppressWarnings("unused")
-    public static double getRandom() {
-        return random.nextDouble();
-    }
 
     public static boolean validateIp(String ip) {
         String pattern = "^((0|1\\d?\\d?|2[0-4]?\\d?|25[0-5]?|[3-9]\\d?)\\.){3}(0|1\\d?\\d?|2[0-4]?\\d?|25[0-5]?|[3-9]\\d?)$";

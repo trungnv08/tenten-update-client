@@ -1,4 +1,4 @@
-package com.trung.constanct;
+package com.trung.constant;
 
 import java.util.Arrays;
 import java.util.Collections;
